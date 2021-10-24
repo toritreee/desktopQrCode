@@ -3,8 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>desktopQrCode</title>
+    <link rel="stylesheet" href="src/index.css">
+    <link rel="stylesheet" href="src/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+    <script src="src/index.js" type="module"></script>
 </head>
 <body>
-    
+    <div class="MIN-video">
+        <video class="" id="video"></video>
+    </div>
+    <footer class="fixed bottom-1">
+        <a class="link black" href="license.html">license</a>
+    </footer>
+    <dialog id="getQrAnser" class="w-50 mt3 br3 tc b-white shadow-1 overflow-hidden">
+        <output id="getQrAnser-data" class="w-90 dib overflow-x-auto overflow-y-hidden"></output>
+        <div class="bt mt3 pt3 flex">
+            <button class="w-50-ns pa2 shadow-1 br3 ma2" id="getQrAnser-open">open url</button>
+            <button class="w-50-ns pa2 shadow-1 br3 ma2" id="getQrAnser-copy">copy</button>
+        </div>
+        <button class="dib w-90 bt" id="getQrAnser-close">return</button>
+    </dialog>
 </body>
 </html>

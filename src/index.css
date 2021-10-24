@@ -1,0 +1,45 @@
+body{
+    overflow-x: clip;
+}
+.MIN-video{
+    height: 100vh;
+    text-align: center;
+    position: relative;
+}
+.MIN-video>video{
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+dialog::backdrop{
+    background-color: rgba(128, 128, 128, 0.5);
+}
+dialog{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    white-space:nowrap;
+}
+
+#getQrAnser-copy::before{
+    transition: all 0.2s;
+    content: "";
+    width: 0;
+    position: absolute;
+    top:0;
+    left:0;
+    display: inline-block;
+    height: 100%;
+    width: 0%;
+}
+#getQrAnser-copy:active::before{
+    background-color: rgb(42, 255, 42);
+    width: 100%;
+}
