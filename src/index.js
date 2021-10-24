@@ -3,6 +3,8 @@ class main{
     constraints = { audio: false, video: true }
 
     constructor(){
+        this.loading = document.getElementById("loadingVideo")
+        this.loading.showModal()
         this.video = document.getElementById("video")
         this.cv = document.createElement("canvas")
         this.ctx = this.cv.getContext("2d")
@@ -17,6 +19,7 @@ class main{
             this.video.srcObject = stream
             video.onloadedmetadata = ()=>{
                 video.play()
+                this.loading.close()
                 this.checkImage()
             }
         })
