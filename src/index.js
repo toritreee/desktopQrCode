@@ -20,11 +20,13 @@ class main{
                 this.checkImage()
             }
         })
-        .catch(this.mediaError)
+        .catch(this.mediaError.bind(this))
     }
 
 
-    mediaError(){}
+    mediaError(){
+        document.getElementById("videoError").showModal()
+    }
 
 
     checkImage(){
@@ -49,5 +51,6 @@ class main{
     }
 }
 
-
-new main().media()
+window.onload = ()=>{
+    new main().media()
+}
